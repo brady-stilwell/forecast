@@ -24,10 +24,17 @@ let handleForecastFormSubmit = (e) => {
 let appendResult = ({ success, data, cached }) => {
   let container = document.querySelector("#result-container")
   let child = document.createElement('p');
-  child.innerHTML = success ? `The current forecast is ${data.main.temp}℉` : data.message
+  child.innerHTML = success ? `The current temperature is ${data.main.temp}℉` : data.message
   container.appendChild(child)
 
+  appendHighLow(container, data.main.temp_max, data.main.temp_min)
   appendCacheIndicator(container, cached)
+}
+
+let appendHighLow = (container, high, low) => {
+  let cacheIndicator = document.createElement('p');
+  cacheIndicator.innerHTML = `The current high is ${high}℉ and the current low is ${low}℉`
+  container.appendChild(cacheIndicator)
 }
 
 let appendCacheIndicator = (container, cached) => {
