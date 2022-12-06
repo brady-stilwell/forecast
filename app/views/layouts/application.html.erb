@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# The below is just to save time, normally we would download it and save under assets folders %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Catamaran','application.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
