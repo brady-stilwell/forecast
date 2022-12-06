@@ -15,6 +15,8 @@ let handleForecastFormSubmit = (e) => {
   let formAction = e.target.action
   let params = new URLSearchParams({ zip: zipCode })
 
+  // TODO: Add validations!!
+
   return fetch(`${formAction}?${params}`)
     .then(data => data.json())
     .then(parsedResponse => appendResult(parsedResponse))
