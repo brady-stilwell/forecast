@@ -1,6 +1,5 @@
 class WeatherController < ApplicationController
-  before_action :set_client, only: :fetch_forecast
-  before_action :set_response_cached?, only: :fetch_forecast
+  before_action :set_client, :set_response_cached?, only: :fetch_forecast
 
   def new; end
 
