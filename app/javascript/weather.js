@@ -24,7 +24,7 @@ let handleForecastFormSubmit = (e) => {
 let appendResult = ({ success, data, cached }) => {
   let container = document.querySelector("#result-container")
   let child = document.createElement('p');
-  child.innerHTML = success ? `The current temperature is ${data.main.temp}℉` : data.message
+  child.innerHTML = success ? `The current temperature is ${data.main.temp}℉ in ${data.name}` : data.message
   container.appendChild(child)
 
   appendHighLow(container, data.main.temp_max, data.main.temp_min)
