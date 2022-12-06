@@ -7,7 +7,7 @@ RSpec.describe WeatherService do
   describe '#fetch_forecast_by_zip' do
     let(:zip_code) { "a random zip" }
     let(:response_body) { { "some": "parsable object" }.to_json }
-    let(:weather_service_response) { WeatherService.new(zip_code).fetch_forecast_by_zip }
+    let(:weather_service_response) { WeatherService.new(zip_code: zip_code).fetch_forecast_by_zip }
 
     before do
       allow(Rails).to receive(:cache).and_return(memory_store)

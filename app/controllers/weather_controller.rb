@@ -17,6 +17,6 @@ class WeatherController < ApplicationController
   end
 
   def set_client
-    @client = WeatherService.new(params[:zip])
+    @client = WeatherService.new(zip_code: params[:zip])
   end
 end

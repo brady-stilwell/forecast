@@ -7,7 +7,7 @@ class WeatherService
 
   attr_reader :zip_code
 
-  def initialize(zip_code)
+  def initialize(zip_code:)
     @zip_code = zip_code
     @options = { query: { q: "#{zip_code},us", appid: ENV["OPEN_WEATHER_TOKEN"], units: "imperial" }, format: :json }
   end
