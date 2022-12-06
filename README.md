@@ -6,6 +6,8 @@
 
 ```Create an .env file```
 
+```add your api key from above: OPEN_WEATHER_TOKEN=<YOUR KEY>```
+
 Make sure to run ```rails dev:cache``` :) to enable caching.
 
 ```rails db:create db:migrate```
