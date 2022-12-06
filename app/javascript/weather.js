@@ -27,7 +27,7 @@ let appendResult = ({ success, data, cached }) => {
   child.innerHTML = success ? `The current temperature is ${data.main.temp}℉ in ${data.name}` : data.message
   container.appendChild(child)
 
-  appendHighLow(container, data.main.temp_max, data.main.temp_min)
+  success && appendHighLow(container, data.main.temp_max, data.main.temp_min)
   appendCacheIndicator(container, cached)
 }
 
